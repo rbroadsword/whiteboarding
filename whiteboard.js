@@ -8,6 +8,18 @@ Input: "Jasmine Ann Jones"
 
 Output: "Jasmine%20Ann%20Jones"
 
+const stringToUrl = (str) => {
+  let result = ""; 
+  for(let i = 0; i < str.length; i++){
+    if (str[i] === " "){
+      result += "%20"; 
+    } else {
+      result += str[i]; 
+    }
+  }
+  return result; 
+}; 
+
 Question #2: Array Deduping
 Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
 
