@@ -42,9 +42,29 @@ Input: "aaabccdddda"
 
 Output: "3ab2c4da"
 
+function compress(string){
+  let compressedString  = ""; 
+  let stringArray = string.split(""); 
+  for (let i = 0; i < stringArray.length; i++){
+    let count = 1; 
+    let currentLetter = stringArray[i]; 
+    while (i < stringArray.length - 1 && stringArray[i] === stringArray[i + 1]){
+      count ++; 
+      i++; 
+    }
+    if (count === 1){
+      compressedString += currentLetter; 
+    } else {
+      compressedString += count + currentLetter; 
+    }
+  }
+  return compressedString
+}
+
 Question #4: Checking for Uniqueness
 Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
 
+regular expression? map? 
 Example
 Input: "hello"
 
