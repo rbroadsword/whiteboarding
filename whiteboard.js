@@ -58,7 +58,7 @@ function compress(string){
       compressedString += count + currentLetter; 
     }
   }
-  return compressedString
+  return compressedString; 
 }
 
 Question #4: Checking for Uniqueness
@@ -73,6 +73,18 @@ Output: false
 Input: "copyright"
 
 Output: true
+
+const checkUniqueness = (str = "") => {
+  const hash = new Set(); 
+  for (let i = 0; i < str.length; i++){
+    const ele = str[i]; 
+    if(hash.has(ele)){
+      return false; 
+    } else{
+      return true; 
+    }
+  }
+}
 
 Question #5: Array Sorting
 Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms — take the time to read about the following:
