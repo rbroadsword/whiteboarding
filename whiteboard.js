@@ -126,4 +126,27 @@ function mergeSort(array){
   return merge(mergeSort(left), mergeSort(array)); 
 }
 
+/// My interview question
 
+Question #1: Turning Strings to URLs
+URLs cannot have spaces. Instead, all spaces in a string are replaced with %20. Write an algorithm that replaces all spaces in a string with %20.
+
+//string might be empty. 
+//given a string
+//look for empty space
+//replace the empty space with %20
+//return the updated string. 
+
+//"Jasmine Ann Jones"
+
+const stringToUrl = (str) => {
+	let result = ""; 
+  for(let = 0; i < str.length; i++){
+  	if(str[i] === " "){
+    result += "%20"; 
+    }else {
+    result += str[i]; 
+    }
+  }
+  return result; 
+}
